@@ -1,0 +1,221 @@
+/* by whydebe */
+
+
+/* root color */
+
+:root {
+    --linegrad-dark_bg: linear-gradient(to right top, #111111, #171717, #1d1d1d, #222222, #282828, #282828, #282828, #282828, #222222, #1d1d1d, #171717, #111111);
+    --lingrad-glass: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    --linegrad-violett-blue: linear-gradient(to right top, #e600ff, #af5fff, #747fff, #3592ff, #009fff);
+    --violett: rgba(230, 0, 255, 1);
+    --blue: rgba(0, 159, 255, 1);
+    --grey: rgba(200, 200, 200, 1);
+    --dark-grey-light: rgba(33, 33, 33, 1);
+    --dark-grey-dark: rgba(17, 17, 17, 1);
+    --redwhite: rgb(255, 78, 78);
+}
+
+
+/* Universal settings */
+
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: "Segoe UI";
+    text-decoration: none;
+    overflow-x: hidden;
+    transition: all 250ms ease-in;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin: 0;
+    background-image: url("./img/bg.png");
+    transition: all 250ms ease-in;
+}
+
+.container-navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px 30px;
+    background-color: var(--dark-grey-dark);
+    position: absolute;
+    width: 100vw;
+}
+
+.navbar-logo {
+    height: 30px;
+    margin-right: auto;
+}
+
+.navbar-item {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--dark-grey-light);
+}
+
+.navbar-item:hover {
+    color: black;
+    background-color: white;
+}
+
+.content-start {
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.exercise {
+    text-align: center;
+    width: 210px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pagenow {
+    color: white;
+    background-image: var(--linegrad-violett-blue);
+}
+
+#pagenow:hover {
+    color: black;
+    background-image: none;
+    background-color: var(--blue);
+}
+
+@keyframes wobble {
+    0% {
+        transform: translate(0, 0);
+        background-color: rgb(44, 44, 44);
+    }
+    15% {
+        transform: translate(1rem, 0);
+        background-color: rgb(44, 44, 44);
+    }
+    35% {
+        transform: translate(-1rem, 0);
+        background-color: rgb(44, 44, 44);
+    }
+    55% {
+        transform: translate(1rem, 0);
+        background-color: rgb(44, 44, 44);
+    }
+    80% {
+        transform: translate(-1rem, 0);
+        background-color: rgb(44, 44, 44);
+    }
+    100% {
+        transform: translate(0, 0);
+        background-color: rgb(44, 44, 44);
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+#selectionWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    margin-bottom: 5rem;
+}
+
+.saberpart {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.saberpart img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.saberpart span {
+    text-align: center;
+    font-style: italic;
+    margin: 10px 0;
+    font-size: larger;
+}
+
+.saberpart button {
+    max-width: 100px;
+    align-self: center;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: large;
+    color: black;
+}
+
+#resultDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#alreadySelected {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#alreadySelected img {
+    width: 10vh;
+}
+
+#tryagain {
+    margin: 20px;
+    padding: 2px 5px;
+    color: black;
+}
+
+
+/* Pagefooter */
+
+.container-footer {
+    background-color: var(--dark-grey-dark);
+    color: white;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+.container-footer p {
+    margin: 10px 0;
+}
+
+.container-footer a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.container-footer a:hover {
+    color: var(--violett);
+}
